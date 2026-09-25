@@ -1,33 +1,26 @@
-# CLIXGROW Marketing Agency — Website
+# CLIXGROW Marketing Agency — Final Website
 
-Plain static site: `index.html`, `style.css`, `script.js`, and images in `assets/`. No build step needed.
+One page, three core files — everything else lives inside `index.html` as linked sections.
+
+## Files
+- `index.html` — the whole site: Home, Services, Why Us, Process, Markets, Contact as sections inside one page, linked to each other by the navbar/anchors (`#services`, `#why-us`, etc.)
+- `style.css` — one shared theme: colors, layout, responsiveness, transitions & animations
+- `script.js` — mobile menu, scroll-reveal animation, and scroll-spy nav highlighting
+- `assets/` — logo icon + favicons
+
+## What changed in this version
+- Navbar now uses a gradient pulled straight from the site's own purple palette (instead of flat dark), while staying visibly distinct via blur + a soft glowing bottom edge
+- New tagline added to the hero: **"Make Your Brand Impossible To Ignore."** (also echoed in the footer and the closing call-to-action)
+- Back to a single `index.html` with the Services/Why Us/Process/Markets/Contact sections linked inside it, instead of separate page files — `style.css` and `script.js` stay as their own linked files
+- Nav now highlights whichever section is currently in view as you scroll
 
 ## Deploy to Vercel
-
-**Option A — Vercel dashboard (easiest)**
-1. Go to vercel.com → **Add New… → Project**.
-2. Choose **Deploy without Git** / drag-and-drop, and drop this whole folder (or the zip, unzipped) onto the upload area.
-3. Framework preset: **Other** (static). Leave build command empty, output directory as root (`.`).
-4. Click **Deploy** — you'll get a live `.vercel.app` URL in about a minute.
-
-**Option B — Vercel CLI**
-```bash
-npm i -g vercel
-cd clixgrow-site
-vercel        # first deploy, follow the prompts
-vercel --prod # promote to production URL
-```
-
-**Option C — GitHub**
-1. Push this folder to a new GitHub repo.
-2. In Vercel, **Add New… → Project → Import Git Repository**, pick the repo.
-3. Framework preset **Other**, no build command — deploy.
-
-## Custom domain
-Once deployed, add `clixgrow.com` under Project → Settings → Domains, then point your domain's DNS to Vercel as instructed there.
+1. Push this folder to GitHub (same steps as before).
+2. Vercel → Add New… → Project → Import Git Repository → your repo.
+3. Framework preset **Other**, no build command, no output directory — Deploy.
 
 ## Editing
-- Colors, spacing, animations → `style.css`
-- Mobile menu + scroll-reveal behavior → `script.js`
-- Content/sections → `index.html`
-- Logo files → `assets/`
+- Colors, navbar gradient, tagline style, animations → `style.css`
+- Mobile menu / scroll-reveal / nav highlight → `script.js`
+- Content and sections → `index.html`
+- Logo/favicons → `assets/`
